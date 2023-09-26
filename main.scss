@@ -1,0 +1,558 @@
+@import "bootstrap/node_modules/bootstrap/scss/functions";
+@import "bootstrap/node_modules/bootstrap/scss/variables";
+@import "bootstrap/node_modules/bootstrap/scss/mixins/_breakpoints";
+
+$primary-color: #fff;
+$secondary-color: #e7e5e2; //#d3d0cb
+$third-color: #577399;
+$fourth-color: #495867;
+$fifth-color: #FF3366;
+
+/* HEX */
+$color1: #122627;
+$color2: #cfe6de;
+$color3: #fefffe;
+$color4: #210124;
+$color5: #750d37;
+$color52:#E63946;
+$color6: #E04C5A;
+
+
+$defaultColor:#E04C5A;// #4daf7c;
+$height: 60px;
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+	aspect-ratio: attr(width) / attr(height);
+}
+
+body {
+	background-color: $primary-color;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-size: 1.1rem;
+	//font-weight: 300;
+	//background-image: url(img/t40.png);
+}
+a:not([href]) {
+	color: #007bff;
+	cursor: pointer;
+	&:hover {
+		color: #0056b3;
+		text-decoration: underline;
+
+	}
+}
+
+svg {
+	display: inline;
+	height: 15px;
+	margin-right: 5px;
+}
+
+header {
+	background-color: $secondary-color;
+}
+#main {
+	padding: 9rem 0;
+	background: $secondary-color url(/img/bg4.min.png) no-repeat bottom;
+	background-size: 113%;
+	min-height: 93vh;
+	background-position: -60px 130px;
+}
+section {
+	padding: 25px 0;
+}
+.intro-message {
+	position: relative;
+	z-index: 2;
+	h1 {
+		font-size: 4rem;;
+		color: $color1;
+		text-transform: uppercase;
+		display: inline;
+		font-weight: 700;
+		@include media-breakpoint-down(xs) {
+				font-size: 2.5rem;
+			}
+	}
+}
+.file-name {
+	height:48px;
+	line-height:48px;
+	overflow:hidden;
+	width: 100%;
+}
+.file-utilities {
+	flex: 0 0 266px;
+	min-width: 266px;
+	text-align: right;
+	a {
+		margin-left: 8px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+.btn-list .btn {
+	background: $primary-color;
+	border-radius: 0;
+	text-transform: uppercase;
+	margin: 5px 15px 5px 15px;
+	color: $color1;
+	//box-shadow: 5px 5px 15px 0 scale-color($primary-color, $lightness: -45%), -5px -5px 15px 0 scale-color($primary-color, $lightness: 15%, $alpha: -40%);
+	box-shadow: 0px 6px 10px -8.5px rgba(0, 0, 0, .7);
+	@include media-breakpoint-down(lg) {
+		margin: 0 20px 10px 20px;
+	}
+	&:hover, &.active {
+		background: $color1;
+		color: $primary-color;
+		text-decoration: inherit;
+	}
+}
+
+.btn {
+	&-primary {
+		border-radius: 0;
+		background: $defaultColor;
+		color: $primary-color;
+		padding: 12px;
+		font-weight: 700;
+		border: none;
+		&:hover, &:active, &:focus {
+			background-color: darken($defaultColor, 15%)!important;
+		}
+	}
+	&-none {
+		display: none;
+	}
+}
+.settings > div {
+	display: none;
+	label, select, input {
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
+	select, input {
+		font-weight: 700;
+	}
+	select, input[type="text"], input[type="time"] {
+		font-size: 1.8rem;
+		padding: 2px 6px;
+		border: 0;
+		border-bottom: 1px solid $color1;
+		background: transparent;
+		margin-right: 40px;
+		height: 45px;
+		outline: none;
+	}
+}
+
+.overlap {
+	margin-top: -110px;
+	top: -110px;
+	color: $primary-color;
+	.row {
+		background: $color1;
+		box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.15);
+		padding: 20px 10px;
+		border-radius: 5px;
+	}
+	date {
+		font-weight: 400;
+		+ p {
+			@include media-breakpoint-down(md) {
+				display: block!important;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.txt-rotate {
+		display: block;
+	}
+}
+.aside--fixed {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+	//font-size: 0.85rem;
+	margin-bottom: 0.75rem;
+	.aside--child {
+		position: relative;
+		.bmc-button {
+			position: absolute;
+			right: 20px;
+			bottom: 0px;
+			box-shadow: 0px 0px 20px 0px #00000014;
+			z-index: 1;
+			/*background: $primary-color!important;
+			color: $color1!important;*/
+		}
+	}
+	.updatealert div div {
+		background: $primary-color;
+		box-shadow: 0px 0px 20px 0px #00000014;
+		padding: 10px;
+		border-radius: 5px;
+		z-index: 2;
+	}
+}
+
+#settingBtn-clean {
+	li{
+		display: flex;
+		align-items: center;
+	}
+	label {
+		margin-bottom: 0;
+		cursor: pointer;
+	}
+	input[type=checkbox] {
+		width: 14px;
+		height: 14px;
+		margin-right: 15px;
+	}
+}
+
+footer {
+	padding: 5px;
+	svg {
+		color: $fifth-color;
+	}
+}
+
+.box {
+	border-radius: 5px;
+	text-align: center;
+	background: $secondary-color;
+	position: relative;
+	padding: 10px 5px;
+	margin-bottom: 20px;
+	button {
+		position: absolute;
+		top: 12px;
+		right: 7px;
+		padding: 0;
+		font-size: 0.8rem;
+	}
+}
+
+
+/*
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label, .resultlabel {
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px *
+	margin-bottom: 0;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px *
+    margin-right: 0.25em;
+    /* 4px *
+}
+
+.inputfile-6 + label, .resultlabel {
+    color: #E04C5A;
+}
+
+.inputfile-6 + label, .resultlabel {
+	width: 100%;
+    background-color: #F3F3F3;
+    padding: 0;
+	border-radius: 0px;
+	box-shadow:  20px 20px 60px #b3b1ad, -20px -20px 60px #f3efe9;
+}
+
+.inputfile-6 + label span,
+.inputfile-6 + label strong, .resultlabel {
+    padding: 12px;
+}
+
+.inputfile-6 + label span, .resultlabel {
+    width: 600px;
+	max-width: 100%;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.resultlabel {
+	width: 777px!important;
+	cursor: default;
+}
+
+.inputfile-6 + label strong {
+	/*height: 100%; makes a 700px height block when php's include fails *
+	float: right;
+	height: 50px;
+    color: #f1e5e6;
+    background-color: #E04C5A;
+    display: inline-block;
+}
+
+.inputfile-6:focus + label strong,
+.inputfile-6.has-focus + label strong,
+.inputfile-6 + label:hover strong {
+    background-color: #be3b47;
+}
+
+@media screen and (max-width: 50em) {
+	.inputfile-6 + label strong {
+		display: block;
+	}
+}
+
+*/
+/*
+input[type="checkbox"] {
+	height: 20px;
+	outline: none;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	background: #fff;
+	transition: background .3s, border-color .3s, box-shadow .2s;
+	width: 20px;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-webkit-box-direction: normal;
+	list-style: none;
+	box-sizing: inherit;
+	&:after {
+		width: 6px;
+		height: 12px;
+		border: 2px solid transparent;
+		border-top: 0;
+		border-left: 0;
+		left: 7px;
+		top: 4px;
+		transform: rotate(43deg);
+		display: block;
+		content: '';
+		position: absolute;
+	}
+	&:checked {
+		&:after {
+			border-color: #FF3366;
+		}
+	}
+}
+*/
+
+.form {
+	width: 100%;
+}
+.file-upload-wrapper {
+	input {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 99;
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	label {
+		position: relative;
+		width: 100%;
+		height: $height;
+		box-shadow: 20px 20px 60px hsla(36, 9%, 78%, 1), -20px -20px 60px hsla(36, 9%, 100%, 1);
+		border-radius: 5px 5px 5px 5px;
+		border-color: $defaultColor!important;
+		cursor: pointer;
+		&:after {
+			content: attr(data-text);
+			overflow: hidden;
+			font-size: 1.1rem; //18px
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: $primary-color;
+			padding: 10px 15px;
+			display: block;
+			width: 100%;
+			pointer-events: none;
+			z-index: 20;
+			height: 100%;
+			line-height: $height - 20px;
+			color: #999;
+			border-radius: 5px 5px 5px 5px;
+			font-weight: 300;
+		}
+		strong {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			height: 56px;
+			background: $primary-color;
+			color: $defaultColor;
+			font-weight: 700;
+			z-index: 25;
+			font-size: 16px;
+			line-height: $height;
+			padding: 0 15px;
+			text-transform: uppercase;
+			pointer-events: none;
+			border-radius: 5px 5px 5px 5px;
+			svg {
+				margin-right: 5px;
+			}
+		}
+		&:hover {
+			strong {
+				color: darken($defaultColor, 15%);
+			}
+		}
+		&.submit-ready {
+			&:after {
+				color: $defaultColor;
+			}
+		}
+	}
+}
+.dragging {
+	border: 2px dotted $defaultColor!important;
+}
+.submit-error {
+	border: 2px solid $defaultColor;
+}
+
+#faq {
+	background-color: $secondary-color;
+	.faq {
+		&_Question {
+			border-bottom: 1px solid;
+			padding: 5px 20px 5px 5px;
+			position: relative;
+			cursor: pointer;
+			&:after {
+				content: '\002B'; /* Unicode character for "plus" sign (+) */
+				color: #777;
+				display: flex;
+				align-items: center;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			&.active:after {
+			content: "\2212"; /* Unicode character for "minus" sign (-) */
+			}
+		}
+		&_Answer {
+			padding: 5px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease;
+		}
+	}
+}
+
+#updates {
+	font-size: 1rem;
+}
+
+section:not(#main):not(#privacy) {
+	padding: 50px 0;
+	.col-12 {
+		text-align: center;
+		padding-bottom: 30px;
+		text-transform: capitalize;
+	}
+	h1 + div {
+		text-transform: none;
+	}
+}
+
+#resync-subtitle, #shift-subtitle {
+	background: #f8f8f8;
+}
+
+.settings > div input[type=time] {
+	margin-right: 10px;
+	&:disabled {
+		color: #ccc;
+	}
+}
+
+
+.no-js {
+	.index-file-selection {
+		display: block !important;
+		&__js {
+			display: none;
+		}
+	}
+	.file-upload-wrapper {
+		display: none;
+	}
+	#file__nojs {
+		display: block !important;
+		width: 100%;
+		background: $primary-color;
+	}
+	.close {
+		display: none !important;
+	}
+	#faq {
+		.faq_Question:after {
+			content: "" !important;
+		}
+		.faq_Answer {
+			max-height: unset;
+		}
+	}
+	.copy {
+		display: none !important;
+	}
+}

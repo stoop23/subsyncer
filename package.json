@@ -1,0 +1,13 @@
+{
+  "name": "subsyncer",
+  "version": "1.0.0",
+  "description": "http://www.wpbeginner.com/wp-tutorials/how-to-install-wordpress-on-your-windows-computer-using-wamp/",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./style.css --style expanded",
+    "prefix": "postcss ./style.css --use autoprefixer -d ./css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

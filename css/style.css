@@ -1,0 +1,467 @@
+@charset "UTF-8";
+/* HEX */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+a:not([href]) {
+  color: #007bff;
+  cursor: pointer;
+}
+a:not([href]):hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+svg {
+  display: inline;
+  height: 15px;
+  margin-right: 5px;
+}
+
+header {
+  background-color: #e7e5e2;
+}
+
+#main {
+  padding: 9rem 0;
+  background: #e7e5e2 url(/img/bg.min.png) no-repeat;
+  min-height: 91vh;
+  background-position: -60px 130px;
+}
+
+section {
+  padding: 25px 0;
+}
+
+.intro-message {
+  position: relative;
+  z-index: 2;
+}
+.intro-message h1 {
+  font-size: 4rem;
+  color: #122627;
+  text-transform: uppercase;
+  display: inline;
+  font-weight: 700;
+}
+@media (max-width: 575.98px) {
+  .intro-message h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.btn-list .btn {
+  background: #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  margin: 5px 15px 5px 15px;
+  color: #122627;
+  -webkit-box-shadow: 0px 6px 10px -8.5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 6px 10px -8.5px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 1199.98px) {
+  .btn-list .btn {
+    margin: 0 20px 10px 20px;
+  }
+}
+.btn-list .btn:hover, .btn-list .btn.active {
+  background: #122627;
+  color: #fff;
+  text-decoration: inherit;
+}
+
+.btn-primary {
+  border-radius: 0;
+  background: #E04C5A;
+  color: #fff;
+  padding: 12px;
+  font-weight: 700;
+  border: none;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #bf2130 !important;
+}
+.btn-none {
+  display: none;
+}
+
+.settings > div {
+  display: none;
+}
+.settings > div label, .settings > div select, .settings > div input {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.settings > div select, .settings > div input {
+  font-weight: 700;
+}
+.settings > div select, .settings > div input[type=text] {
+  font-size: 1.8rem;
+  padding: 2px 6px;
+  border: 0;
+  border-bottom: 1px solid #122627;
+  background: transparent;
+  margin-right: 40px;
+  height: 45px;
+  outline: none;
+}
+
+.overlap {
+  margin-top: -85px;
+  top: -85px;
+  color: #fff;
+}
+.overlap .row {
+  background: #122627;
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.15);
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+.overlap date {
+  font-weight: 400;
+}
+@media (max-width: 991.98px) {
+  .overlap date + p {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .txt-rotate {
+    display: block;
+  }
+}
+.aside--fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  margin-bottom: 0.75rem;
+}
+.aside--fixed .aside--child {
+  position: relative;
+}
+.aside--fixed .aside--child .bmc-button {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  -webkit-box-shadow: 0px 0px 20px 0px #00000014;
+          box-shadow: 0px 0px 20px 0px #00000014;
+  z-index: 1;
+  /*background: $primary-color!important;
+  color: $color1!important;*/
+}
+.aside--fixed .updatealert div div {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 20px 0px #00000014;
+          box-shadow: 0px 0px 20px 0px #00000014;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+#settingBtn-clean li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#settingBtn-clean label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+#settingBtn-clean input[type=checkbox] {
+  width: 14px;
+  height: 14px;
+  margin-right: 15px;
+}
+
+footer {
+  padding: 5px;
+}
+footer svg {
+  color: #FF3366;
+}
+
+.box {
+  border-radius: 5px;
+  text-align: center;
+  background: #e7e5e2;
+  position: relative;
+  padding: 10px 5px;
+}
+.box button {
+  position: absolute;
+  top: 12px;
+  right: 7px;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+/*
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label, .resultlabel {
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px *
+	margin-bottom: 0;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px *
+    margin-right: 0.25em;
+    /* 4px *
+}
+
+.inputfile-6 + label, .resultlabel {
+    color: #E04C5A;
+}
+
+.inputfile-6 + label, .resultlabel {
+	width: 100%;
+    background-color: #F3F3F3;
+    padding: 0;
+	border-radius: 0px;
+	box-shadow:  20px 20px 60px #b3b1ad, -20px -20px 60px #f3efe9;
+}
+
+.inputfile-6 + label span,
+.inputfile-6 + label strong, .resultlabel {
+    padding: 12px;
+}
+
+.inputfile-6 + label span, .resultlabel {
+    width: 600px;
+	max-width: 100%;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.resultlabel {
+	width: 777px!important;
+	cursor: default;
+}
+
+.inputfile-6 + label strong {
+	/*height: 100%; makes a 700px height block when php's include fails *
+	float: right;
+	height: 50px;
+    color: #f1e5e6;
+    background-color: #E04C5A;
+    display: inline-block;
+}
+
+.inputfile-6:focus + label strong,
+.inputfile-6.has-focus + label strong,
+.inputfile-6 + label:hover strong {
+    background-color: #be3b47;
+}
+
+@media screen and (max-width: 50em) {
+	.inputfile-6 + label strong {
+		display: block;
+	}
+}
+
+*/
+/*
+input[type="checkbox"] {
+	height: 20px;
+	outline: none;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	background: #fff;
+	transition: background .3s, border-color .3s, box-shadow .2s;
+	width: 20px;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-webkit-box-direction: normal;
+	list-style: none;
+	box-sizing: inherit;
+	&:after {
+		width: 6px;
+		height: 12px;
+		border: 2px solid transparent;
+		border-top: 0;
+		border-left: 0;
+		left: 7px;
+		top: 4px;
+		transform: rotate(43deg);
+		display: block;
+		content: '';
+		position: absolute;
+	}
+	&:checked {
+		&:after {
+			border-color: #FF3366;
+		}
+	}
+}
+*/
+.form {
+  width: 100%;
+}
+
+.file-upload-wrapper input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.file-upload-wrapper label {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  -webkit-box-shadow: 20px 20px 60px #ccc8c2, -20px -20px 60px white;
+          box-shadow: 20px 20px 60px #ccc8c2, -20px -20px 60px white;
+  border-radius: 5px 5px 5px 5px;
+  border-color: #E04C5A !important;
+  cursor: pointer;
+}
+.file-upload-wrapper label:after {
+  content: attr(data-text);
+  overflow: hidden;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 10px 15px;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+  z-index: 20;
+  height: 100%;
+  line-height: 40px;
+  color: #999;
+  border-radius: 5px 5px 5px 5px;
+  font-weight: 300;
+}
+.file-upload-wrapper label strong {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 56px;
+  background: #fff;
+  color: #E04C5A;
+  font-weight: 700;
+  z-index: 25;
+  font-size: 16px;
+  line-height: 60px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-radius: 5px 5px 5px 5px;
+}
+.file-upload-wrapper label strong svg {
+  margin-right: 5px;
+}
+.file-upload-wrapper label:hover strong {
+  color: #bf2130;
+}
+.file-upload-wrapper label.submit-ready:after {
+  color: #E04C5A;
+}
+
+.dragging {
+  border: 2px dotted #E04C5A !important;
+}
+
+.submit-error {
+  border: 2px solid #E04C5A;
+}
+
+.faq_Question {
+  border-bottom: 1px solid;
+  padding: 5px 20px 5px 5px;
+  position: relative;
+  cursor: pointer;
+}
+.faq_Question:after {
+  content: "+";
+  /* Unicode character for "plus" sign (+) */
+  color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.faq_Question.active:after {
+  content: "−";
+  /* Unicode character for "minus" sign (-) */
+}
+.faq_Answer {
+  padding: 5px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease;
+  -o-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0eWxlLmNzcyIsIi4uL21haW4uc2NzcyIsIi4uL2Jvb3RzdHJhcC9ub2RlX21vZHVsZXMvYm9vdHN0cmFwL3Njc3MvbWl4aW5zL19icmVha3BvaW50cy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ1VoQixRQUFBO0FBYUE7RUFDRSx1QkFBQTtBRHBCRjs7QUN1QkE7RUFDQyxzQkF4QmU7QURJaEI7O0FDd0JBO0VBQ0MsY0FBQTtFQUNBLGVBQUE7QURyQkQ7QUNzQkM7RUFDQyxjQUFBO0VBQ0EsMEJBQUE7QURwQkY7O0FDeUJBO0VBQ0MsZUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBRHRCRDs7QUN5QkE7RUFDQyx5QkE1Q2lCO0FEc0JsQjs7QUN3QkE7RUFDQyxlQUFBO0VBQ0Esa0RBQUE7RUFDQSxnQkFBQTtFQUNBLGdDQUFBO0FEckJEOztBQ3VCQTtFQUNDLGVBQUE7QURwQkQ7O0FDc0JBO0VBQ0Msa0JBQUE7RUFDQSxVQUFBO0FEbkJEO0FDb0JDO0VBQ0MsZUFBQTtFQUNBLGNBdERPO0VBdURQLHlCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0FEbEJGO0FFdUJJO0VEVkg7SUFPRyxpQkFBQTtFRGhCRjtBQUNGOztBQ29CQTtFQUNDLGdCQXhFZTtFQXlFZixnQkFBQTtFQUNBLHlCQUFBO0VBQ0EseUJBQUE7RUFDQSxjQXJFUTtFQXVFUiwwREFBQTtVQUFBLGtEQUFBO0FEbEJEO0FFU0k7RURFSjtJQVNFLHdCQUFBO0VEaEJBO0FBQ0Y7QUNpQkM7RUFDQyxtQkE1RU87RUE2RVAsV0FwRmM7RUFxRmQsd0JBQUE7QURmRjs7QUNvQkM7RUFDQyxnQkFBQTtFQUNBLG1CQTVFWTtFQTZFWixXQTdGYztFQThGZCxhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0FEakJGO0FDa0JFO0VBQ0Msb0NBQUE7QURoQkg7QUNtQkM7RUFDQyxhQUFBO0FEakJGOztBQ29CQTtFQUNDLGFBQUE7QURqQkQ7QUNrQkM7RUFDQyxlQUFB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 */

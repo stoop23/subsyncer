@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^((?!get)[^\./]+)/?$ $1.php [NC,L]
+
+# RewriteRule ^([^\./]+)/?$ https://subsyncer.com/$1$2.php [NC,L,R=301]
